@@ -1,0 +1,18 @@
+function [outputImage] = edge_detection(inputImage)
+% Initialise the size of the inputimage
+[rows , cols] = size(inputImage);
+% Intialise size of outputImage as empty
+outputImage=uint8(zeros([rows cols]));
+% Iterating through the rows
+for x=1:1:rows-1
+    % Iterating through the columns
+    for y=1:1:cols-1
+        % Equations for the Veritcal and Horizontal edge detection
+        outH(x,y) = abs(inputImage(x,y)-inputImage(i+1,j));
+        outV(x,y) = abs(inputImage(x,y)-inputImage(i+1,j));
+        % Output image
+        outputImage(i,j) = (outH(i,j)+outV(i,j))/2;
+        
+    end
+end
+end
