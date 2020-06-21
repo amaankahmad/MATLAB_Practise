@@ -13,11 +13,10 @@ centreY=ceil(cols/2);
 % For loop going through each pixel in the inputImage
 for pixelX=1:1:rows
     for pixelY=1:1:cols
-        % Variable describing location of pixel with respect to image centre
+        % Variable describing location of pixel w
         coord = [pixelX-centreX; pixelY-centreY];
-        % Rotate each pixel to its new position with respect to image centre
-        rotatedCoord = matrixRotation*coord;   
-        % Coordinates of rotated pixel with respect to image origin
+        % Rotate each pixel to its new position
+        rotatedCoord = matrixRotation*coord;                            
         rotatedX=round(rotatedCoord(1,1))+centreX;
         rotatedY=round(rotatedCoord(2,1))+centreY;
         % Checks if each pixel rotated fits in the dimensions specified
