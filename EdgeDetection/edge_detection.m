@@ -12,7 +12,7 @@ for x=1:1:rows-1
         % Equations for the Veritcal and Horizontal edge detection
         outV(x,y) = abs(inputImage(x,y)-inputImage(x+1,y));
         outH(x,y) = abs(inputImage(x,y)-inputImage(x,y+1));
-        % Output image
+        % Output image averaging vertical and horizontal edge detection
         outputImage(x,y) = (outH(x,y)+outV(x,y))/2;
         
     end
