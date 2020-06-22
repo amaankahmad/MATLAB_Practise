@@ -14,7 +14,6 @@ for x=1:1:rows-1
         outH(x,y) = abs(inputImage(x,y)-inputImage(x,y+1));
         % Output image averaging vertical and horizontal edge detection
         outputImage(x,y) = (outH(x,y)+outV(x,y))/2;
-        
     end
 end
 end
